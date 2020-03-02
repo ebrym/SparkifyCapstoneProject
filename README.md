@@ -26,7 +26,7 @@
 <a id='overview'></a>
 
 ## 1. Project Overview
-Predicting churn rates is a challenging and common problem regularly encountered in any customer-facing business. It is crucial for businesses to identify customers who are about to churn and take action to retain them before it happens. Beign proactive on this can significantly increase customer satisfaction for sevices rendered by the business.
+Predicting churn rates is quite a challenging and common problem regularly encountered in any customer-facing business. It is crucial for businesses to identify customers who are about to churn and take action to retain them before it happens. Being proactive on this can significantly increase customer satisfaction for sevices rendered by the business.
 The goal of this project was to help Sparkify music service retain their customers. In this project, data analysis was done using a minified version of the large dataset due to availability of resources needed to run the large dataset. Also, an analysis of different machine learning techniques were explored in order to determine the best machine learning algorithm to use for prediction. Further more, a web application was developed to demonstrate the results.
 
 
@@ -39,8 +39,9 @@ MASTER SCREEN
 
 
 <a id='Problem-Statement'></a>
+
 ### Problem Statement
-The goal of the project is to help to sparkify take proactive measure in retaining their customers, the main task of the project is to make a predictions, whether the customer is about to churn. Such a prediction can be made for each customer by a binary classifier model. The following tasks should be completed to create the model:
+The goal of the project is to help to sparkify take proactive measure in retaining their customers, the main task of the project is to make a prediction, whether the customer is about to churn. Such a prediction can be made for each customer by a binary classifier model. The following tasks should be completed to create the model:
 
 *	Analyze and preprocess the data to extract features for each customer;
 *	Train classifier to predict customer churn;
@@ -64,7 +65,7 @@ There are three(3) components of this project:
 <a id='Input-Data'></a>
 
 ### Input Data
-As input data, a mini dataset is use for analysis:
+As input data, a mini dataset is used for analysis:
 * mini_sparkify_event_data.json – a tiny subset of the full dataset, which is useful for preliminary data analysis.
  this can be downloaded from __[Sample data file](https://www.kaggle.com/ibrodex/Sparkify)__  and place in _data_ folder.
 
@@ -131,7 +132,7 @@ There are two(2) steps to get the appplication up and runnning with the web app.
 
 ### 3.1. Data Cleaning and ML Model Building
 
-**Go to the project directory** and the run the following command:
+**Go to the project directory** and then run the following command:
 
 ```bat
 python data/process_data.py data/mini_sparkify_event_data.json model/classifier
@@ -199,16 +200,16 @@ The repository has the following structure:
 
 ## 5. Conclusion
 
-The goal of the project is to help the Sparkify service to retain the customers. The proposed solution to reach this goal is as follows:
-* A large part of the solution is the preprocessing of the initial data. Transformming the data into records in terms of each Sparkify customer. Feature engineering and preprocessing were required in order to prepare the data ready for machine learning.
+The goal of the project is to help the Sparkify service to retain their customers. The proposed solution to reach this goal is as follows:
+* A large part of the solution is the preprocessing of the initial data. Transforming the data into records in terms of each Sparkify customer. Feature engineering and preprocessing were required in order to prepare the data ready for machine learning.
 * The second large part of the solution is the machine learning pipeline, which predicts customer churn. I tried several classifiers and compared their F1 scores to choose the best performing solution. I also tuned the classifiers with the help of a grid search and cross-validation for the chosen classifier.
 * The last part of the solution is the web application which demonstrates the churn prediction. The web application allows the user to enter the information about the customer and then identifies whether this customer is about to churn. 
 * All parts of the solution are built in Python using Spark.
  
-The most challenging parts of this project is feature engineering and the refinement of the model. In feature engineering it is quite challenging to determine which features to use for prediction and on one hand will help to predict churn and will not overfit the model on the other. Also, i had difficulties setting up spark enviroment on my local maching in other to build and train the ML model as well as running the web app.
+The most challenging parts of this project is feature engineering and the refinement of the model. In feature engineering it is quite challenging to determine which features to use for prediction and on one hand will help to predict churn and will not overfit the model on the other. Also, i had difficulties setting up spark enviroment on my local machine in order to build and train the ML model as well as running the web app.
 
 ### Improvement
-In order to improve on the proposed solution, the follow might be considered:
+In order to improve on the proposed solution, the following might be considered:
 * Use larger dataset for machine learning. Having more data could raise the robustness of the model.
 * Try model stacking to raise the accuracy of the prediction.
 * Try more algorithms (Train time was an issue).
