@@ -128,9 +128,9 @@ def process_dataset(df):
     df = df.withColumn('last_level', when(df.last_ts == df.ts, df.level))
     
     #aditional feature: Gender
-    flag_gender = udf(lambda x: 1 if x == 'M' else 0, IntegerType())
-    gender = df.select("userId", "gender").dropDuplicates()
-    gender = df.withColumn("gender", flag_gender("gender"))
+    # flag_gender = udf(lambda x: 1 if x == 'M' else 0, IntegerType())
+    # gender = df.select("userId", "gender").dropDuplicates()
+    # gender = df.withColumn("gender", flag_gender("gender"))
     
     # create column avg_songs to calculate average number of events per day
     w = Window.partitionBy('userId', 'date')
