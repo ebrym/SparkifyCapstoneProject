@@ -122,6 +122,7 @@ The web application allows the user to enter the information about the customer 
 
 
 <a id='run'></a>
+
 ## 3. Running
 
 There are two(2) steps to get the appplication up and runnning with the web app.
@@ -169,7 +170,7 @@ This will start the web app and will direct you to a URL where you can enter mes
 
 <a id='files'></a>
 
-## Repository Structure
+## 4. Files
 The repository has the following structure:
 ```
 - app
@@ -196,7 +197,7 @@ The repository has the following structure:
 
 <a id='conclusion'></a>
 
-## 4. Conclusion
+## 5. Conclusion
 
 The goal of the project is to help the Sparkify service to retain the customers. The proposed solution to reach this goal is as follows:
 * A large part of the solution is the preprocessing of the initial data. Transformming the data into records in terms of each Sparkify customer. Feature engineering and preprocessing were required in order to prepare the data ready for machine learning.
@@ -205,6 +206,13 @@ The goal of the project is to help the Sparkify service to retain the customers.
 * All parts of the solution are built in Python using Spark.
  
 The most challenging parts of this project is feature engineering and the refinement of the model. In feature engineering it is quite challenging to determine which features to use for prediction and on one hand will help to predict churn and will not overfit the model on the other. Also, i had difficulties setting up spark enviroment on my local maching in other to build and train the ML model as well as running the web app.
+
+### Improvement
+In order to improve on the proposed solution, the follow might be considered:
+* Use larger dataset for machine learning. Having more data could raise the robustness of the model.
+* Try model stacking to raise the accuracy of the prediction.
+* Try more algorithms (Train time was an issue).
+* Increase number of parameters in cross validation.
 
 
 
