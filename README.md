@@ -182,19 +182,15 @@ The repository has the following structure:
 
 - data
 |- mini_sparkify_event_data.json # can be downloaded from [Sample data file](https://www.kaggle.com/ibrodex/Sparkify)__ and place in _data_ folder.
+|- process_data.py # script, which builds the classifier to predict customer churn
 
 - screenshots
 |- home.jpg # the screenshot of the main page
 |- result.png # the screenshot of page with prediction result
-|- demo1.gif # animation with successful prediction
-|- demo2.gif # animation with prediction of churn
-
-- model
-|- create_model.py # script, which builds the classifier to predict customer churn
+|- success_result_1.JPG # pictoril representation of the  succesful prediction with pop up message.
+|- success_result.JPG # pictoril representation of the  succesful prediction.
 
 - README.md
-- Sparkify Medium.ipynb # Python 3 notebook, which contains analysis of medium dataset
-- Sparkify Refinement.ipynb # Python 3 notebook, which contains model refinement and conclusion
 - Sparkify.ipynb # Python 3 notebook, which contains EDA of small dataset
 ```
 
