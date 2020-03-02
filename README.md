@@ -101,7 +101,7 @@ Machine learning pipeline for our task consists of the following steps:
 2.	Create dummy columns out of categorical columns e.g. ‘gender’, ‘last_level’, and ‘last_state’. When using pyspark machine learning library sparkml, this step actually consists of two parts: indexing categorical column and encoding it.
 3.	Create a feature vector.
 4.	Train the classifier.
-The Random Forest Classifier was chosen from the set of other models (Logistic Regression, Gradient-boosted Tree, Naive Bayes) because it demonstrated the best performance in terms of the F1 score (81%).
+The Random Forest Classifier was chosen from the set of other models (Logistic Regression, Gradient-boosted Tree, Naive Bayes) because it demonstrated the best performance in terms of the F1 score (82%).
 
 
 <a id='flask'></a>
