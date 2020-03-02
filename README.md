@@ -61,9 +61,6 @@ The initial dataset analysis shows us that the dataset is imbalanced: there are 
 In our case, we should care about both types of errors: false negatives and false positives because in case of false negative we can miss the customer who is going to churn and lose the customer and in case of false positive we can have unnecessary costs on retaining the customer who was not going to churn. That is why as a metric to evaluate the model I chose F1 score because it equally considers both the precision and the recall.
 
 
-
-
-
 <a id='components'></a>
 
 ## 2. Project Components
@@ -78,7 +75,8 @@ As input data I have several datasets, which contain the log of Sparkify music s
  this can be downloaded from 
 
 
-__[Sample data file](https://github.com/Lexie88rus/Udacity-DSND-Capstone-Data-Analysis-with-Spark/blob/master/data/sample_sparkify_data.json)__.
+__[Sample data file](https://www.kaggle.com/ibrodex/Sparkify)__ download data and place in _data_ folder.
+
 
 <a id='Implementation'></a>
 
@@ -171,6 +169,8 @@ This will start the web app and will direct you to a URL where you can enter mes
 **_Screenshot 3_**
 
 ![web_app](screenshots/home.JPG)
+![Sample Result](screenshots/success_result_1.JPG)
+![Sample Result](screenshots/success_result.JPG)
 
 
 ## Repository Structure
@@ -180,11 +180,11 @@ The repository has the following structure:
 | - templates
 | |- master.html  # main page of web app
 | |- go.html  # classification result page of web app
-| - static
+| - static # contains static files like css and javascript.
 |- run.py  # Flask script that runs app
 
 - data
-|- sample_sparkify_data.json # sample data file
+|- mini_sparkify_event_data.json # can be downloaded from [Sample data file](https://www.kaggle.com/ibrodex/Sparkify)__ and place in _data_ folder.
 
 - screenshots
 |- home.jpg # the screenshot of the main page
@@ -195,7 +195,6 @@ The repository has the following structure:
 - model
 |- create_model.py # script, which builds the classifier to predict customer churn
 
-- DSND Capstone Report.pdf # detailed report on the project
 - README.md
 - Sparkify Medium.ipynb # Python 3 notebook, which contains analysis of medium dataset
 - Sparkify Refinement.ipynb # Python 3 notebook, which contains model refinement and conclusion
@@ -207,7 +206,13 @@ The repository has the following structure:
 
 ## 4. Conclusion
 
-Disasters are naturally occurring events that are usually not planned or are sometimes foreseen/predicted to occur at certain period. When this happens, it is important to know what kind of emergencies are needed by victims affected by the event. Timely categorization of news reports, texts, and calls can help the relief agencies quickly assess the situation and provide neccessary assistance. This project is tailored to help a user/aid worker to timely make decissions on message received by using the user interface to input the message in other to get the category the message belongs.
+The goal of the project is to help the Sparkify service to retain the customers. The solution which I proposed to reach this goal is as follows:
+* A large part of the solution is the preprocessing of the initial data. The initial data was in terms of music service events. I transformed it into records in terms of each Sparkify customer. Feature engineering and preprocessing were required to obtain the dataset which is ready for machine learning.
+* The second large part of the solution is the machine learning pipeline, which predicts customer churn. I tried several classifiers and compared their F1 scores to choose the best performing solution. I also tuned the hyperparameters with the help of a grid search and cross-validation for the chosen classifier. The final F1 score of the solution is 81%.
+* The last part of the solution is the web application which demonstrates the churn prediction. The web application allows the user to enter the information about the customer and then identifies whether this customer is about to churn. 
+* All parts of the solution are built in Python using Spark.
+The most challenging parts of this journey were the feature engineering and the refinement of the model. In feature engineering it is challenging to propose features, which on one hand will help to predict churn and will not overfit the model on the other. Trying to refine the model I tried out several techniques, but not all of them worked (for example, bucketing of continuous numerical features).
+
 
 **_Screenshot 4_**
 
@@ -244,6 +249,11 @@ The accuracy metric for the ML training is high (this can be seen after the mode
 ## 6. Software Requirements
 
 This project uses **Python 3.7**
+
+## External Libraries
+1. [PySpark](https://spark.apache.org/docs/2.2.1/api/python/index.html#), SparkML
+2. [Flask](http://flask.pocoo.org/docs/1.0/installation/)
+3. [findspark](https://github.com/minrk/findspark)
 
 <a id='credits'></a>
 

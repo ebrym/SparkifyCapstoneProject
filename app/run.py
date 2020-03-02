@@ -206,11 +206,13 @@ def go():
     df = df.withColumn("thumbs_up", df["thumbs_up"].cast(IntegerType()))
     df = df.withColumn("thumbs_down", df["thumbs_down"].cast(IntegerType()))
     df = df.withColumn("addfriend", df["addfriend"].cast(IntegerType()))
-    df = df.withColumn("last_state", df["last_state"].cast(IntegerType()))
- 
+    #df = df.withColumn("last_state", df["last_state"].cast(IntegerType()))
+
+    df.show()
     # predict using the model
     pred = model.transform(df)
     
+    pred.show()
     if pred.count() == 0:
         # if model failed to predict churn then return -1
         prediction = -1

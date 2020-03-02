@@ -224,6 +224,6 @@ dmypy.json
 
 # Application ignore files
 .DS_Store
-models/classifier
+models/classifier/*
 data/mini_sparkify_event_data.json
 # End of https://www.gitignore.io/api/python,pycharm,jupyternotebooks,visualstudiocode
