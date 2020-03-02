@@ -89,6 +89,9 @@ File _data/process_data.py_ contains data cleaning operations that:
 - Extract the feature needed for Machine Learning Prediction.
 - Build and save Machine learning model.
 
+**_Screenshot ETL/ML_**
+![ml_visual](screenshots/processing.JPG)
+
 <a id='ml_pipeline'></a>
 
 ### 2.2. Machine Learning
@@ -121,7 +124,7 @@ The web application allows the user to enter the information about the customer 
 <a id='run'></a>
 ## 3. Running
 
-There are three steps to get the appplication up and runnning with the web app.
+There are two(2) steps to get the appplication up and runnning with the web app.
 
 <a id='cleaning'></a>
 
