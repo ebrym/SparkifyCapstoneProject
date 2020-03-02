@@ -1,5 +1,3 @@
-
-
 # Data Scientist Nanodegree
 
 ## Project: Udacity DSND Capstone Data Analysis using Spark
@@ -8,19 +6,18 @@
 
 - [Project Overview](#overview)
    - [Problem Statement](#Problem-Statement)
-   - [Metrics](#input-data)
+   - [Metrics](#Metrics)
 - [Project Components](#components)
   - [Input Data](#input-data)
-  - [Implementation](#input-data)
+  - [Implementation](#Implementation)
     - [ETL Pipeline](#ml_pipeline)
     - [ML Pipeline](#ml_pipeline)
-    - [Flask Web App](#flask)
+  -[Flask Web App](#flask)
 - [Running](#run)
   - [Data Cleaning](#cleaning)
-  - [Training Classifier](#training)
   - [Starting the Web App](#starting)
-- [Conclusion](#conclusion)
 - [Files](#files)
+- [Conclusion](#conclusion)
 - [Software Requirements](#sw)
 - [Credits and Acknowledgements](#credits)
 
@@ -47,42 +44,40 @@ CLASSIFICATION SCREEN
 
 <a id='Problem-Statement'></a>
 ### Problem Statement
-As the goal of the project is to help to retain the customers, the main task of the project is to make a prediction, whether the customer is about to churn. Such a prediction can be made for each customer by a binary classifier model. The following tasks should be completed to create the model:
-•	Analyze and preprocess the data to extract features for each customer;
-•	Train classifier to predict customer churn;
-•	Evaluate the classifier concerning the chosen metric;
-•	Build a web application to demonstrate the results.
+The goal of the project is to help to retain the customers, the main task of the project is to make a prediction, whether the customer is about to churn. Such a prediction can be made for each customer by a binary classifier model. The following tasks should be completed to create the model:
+
+*	Analyze and preprocess the data to extract features for each customer;
+*	Train classifier to predict customer churn;
+*	Evaluate the classifier concerning the chosen metric;
+*	Build a web application to demonstrate the results.
 
 <a id='Metrics'></a>
 
 ### Metrics
 
-The initial dataset analysis shows us that the dataset is imbalanced: there are more than 3 times fewer users, who churned, than other users. That is why I can’t use accuracy (which is the number of correct predictions divided by the total number of predictions) as a metric to evaluate the resulting model. 
-In our case, we should care about both types of errors: false negatives and false positives because in case of false negative we can miss the customer who is going to churn and lose the customer and in case of false positive we can have unnecessary costs on retaining the customer who was not going to churn. That is why as a metric to evaluate the model I chose F1 score because it equally considers both the precision and the recall.
+The initial dataset analysis shows that there are more than 3 times fewer users, who churned, than other users. This is the reason why we can’t use accuracy (the number of correct predictions divided by the total number of predictions) as a metric to evaluate the resulting model. 
+Therefore, in this case, we care more about both types of errors: false negatives and false positives because in case of false negative we can miss the customer who is going to churn and lose the customer and in case of false positive we can have unnecessary costs on retaining the customer who was not going to churn. That is why as a metric to evaluate the model using F1 score because it equally considers both the precision and the recall.
 
 
 <a id='components'></a>
 
 ## 2. Project Components
 
-There are three components of this project:
+There are three(3) components of this project:
 
 <a id='Input-Data'></a>
 
 ### Input Data
 As input data I have several datasets, which contain the log of Sparkify music service events:
 * mini_sparkify_event_data.json – a tiny subset of the full dataset, which is useful for preliminary data analysis.
- this can be downloaded from 
-
-
-__[Sample data file](https://www.kaggle.com/ibrodex/Sparkify)__ download data and place in _data_ folder.
+ this can be downloaded from __[Sample data file](https://www.kaggle.com/ibrodex/Sparkify)__  and place in _data_ folder.
 
 
 <a id='Implementation'></a>
 
 ### Implementation
 
-The input datasets contain massive amounts of data, which can’t be processed on a single machine. That is why I will use Spark clusters to analyze data and predict customer churn. I use PySpark and SparkML libraries to implement the solution.
+The input dataset contain massive amounts of data, which can’t be processed on a single machine. Spark clusters will be used to analyze data and predict customer churn using PySpark and SparkML libraries to implement the solution.
 The implementation of the project consists of two parts:
 * Application of machine learning methods to predict churn. This part involves creation of machine learning pipelines, evaluation and tuning of the approach.
 * Development of a web application to demonstrate the resulting model.
@@ -100,7 +95,7 @@ File _data/process_data.py_ contains data cleaning operations that:
 
 <a id='ml_pipeline'></a>
 
-### 2.2. ML Pipeline
+### 2.2. Machine Learning
 
 Machine learning pipeline for our task consists of the following steps:
 1.	Split dataset into train, test, and validation.
@@ -173,6 +168,8 @@ This will start the web app and will direct you to a URL where you can enter mes
 ![Sample Result](screenshots/success_result.JPG)
 
 
+<a id='files'></a>
+
 ## Repository Structure
 The repository has the following structure:
 ```
@@ -206,43 +203,14 @@ The repository has the following structure:
 
 ## 4. Conclusion
 
-The goal of the project is to help the Sparkify service to retain the customers. The solution which I proposed to reach this goal is as follows:
-* A large part of the solution is the preprocessing of the initial data. The initial data was in terms of music service events. I transformed it into records in terms of each Sparkify customer. Feature engineering and preprocessing were required to obtain the dataset which is ready for machine learning.
+The goal of the project is to help the Sparkify service to retain the customers. The proposed solution to reach this goal is as follows:
+* A large part of the solution is the preprocessing of the initial data. Transformming the data into records in terms of each Sparkify customer. Feature engineering and preprocessing were required in order to obtain a prepare the data ready for machine learning.
 * The second large part of the solution is the machine learning pipeline, which predicts customer churn. I tried several classifiers and compared their F1 scores to choose the best performing solution. I also tuned the hyperparameters with the help of a grid search and cross-validation for the chosen classifier. The final F1 score of the solution is 81%.
 * The last part of the solution is the web application which demonstrates the churn prediction. The web application allows the user to enter the information about the customer and then identifies whether this customer is about to churn. 
 * All parts of the solution are built in Python using Spark.
-The most challenging parts of this journey were the feature engineering and the refinement of the model. In feature engineering it is challenging to propose features, which on one hand will help to predict churn and will not overfit the model on the other. Trying to refine the model I tried out several techniques, but not all of them worked (for example, bucketing of continuous numerical features).
+The most challenging parts of this journey were the feature engineering and the refinement of the model. In feature engineering it is challenging to propose features, which on one hand will help to predict churn and will not overfit the model on the other.
 
 
-**_Screenshot 4_**
-
-![data](screenshots/datavisualizations.JPG)
-
-The accuracy metric for the ML training is high (this can be seen after the model is trained by grid search, it is ~0.94). 
-
-<a id='files'></a>
-
-## 5. Files
-
-<pre>
-.
-├── app
-│   ├── run.py------------------------# FLASK TO RUN THE WEB APP
-│   ├── static------------------------# STATIC FILES FOR THE WEB APP
-│   └── templates
-│       ├── go.html-------------------# CLASSIFICATION RESULT PAGE OF WEB APP
-│       └── master.html---------------# MAIN PAGE OF WEB APP
-├── data
-│   ├── DisasterResponse.db-----------# DATABASE TO SAVE CLEANED DATA
-│   ├── disaster_categories.csv-------# DATA TO PROCESS
-│   ├── disaster_messages.csv---------# DATA TO PROCESS
-│   └── process_data.py---------------# PERFORMS ETL TASK
-├── screenshots-----------------------# IMAGES USES IN README FROM THE WEB APP
-├── models
-│   └── train_classifier.py-----------# PERFORMS CLASSIFICATION TASK
-│   └── classifier.pkl----------------# ML TRAINING RESULT 
-
-</pre>
 
 <a id='sw'></a>
 
@@ -259,6 +227,6 @@ This project uses **Python 3.7**
 
 ## 7. Credits and Acknowledgements
 
-Thanks <a href="https://www.udacity.com" target="_blank">Udacity</a> team and <a href="https://www.figure-eight.com/" target="_blank"> Figure Eight</a> for providing the data for this project.. 
+Thanks <a href="https://www.udacity.com" target="_blank">Udacity</a> team 
 Template for web app is gotten from <a href="https://coderthemes.com" target="_blank">Coder Themes</a>.
 
