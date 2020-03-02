@@ -164,7 +164,7 @@ This will start the web app and will direct you to a URL where you can enter mes
 **_Screenshot 3_**
 
 ![web_app](screenshots/home.JPG)
-![Sample Result](screenshots/success_result_1.JPG)
+![Sample Result](screenshots/Success_result_1.JPG)
 ![Sample Result](screenshots/success_result.JPG)
 
 
@@ -223,6 +223,6 @@ This project uses **Python 3.7**
 
 ## 7. Credits and Acknowledgements
 
-Thanks <a href="https://www.udacity.com" target="_blank">Udacity</a> team 
+Thanks <a href="https://www.udacity.com" target="_blank">Udacity</a> team.
 Template for web app is gotten from <a href="https://coderthemes.com" target="_blank">Coder Themes</a>.
 
