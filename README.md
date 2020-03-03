@@ -234,9 +234,9 @@ This project uses **Python 3.7**
 
 ## 7. Credits and Acknowledgements
 
-Thanks <a href="https://www.udacity.com" target="_blank">Udacity</a> team.
-Template for web app is gotten from <a href="https://coderthemes.com" target="_blank">Coder Themes</a>.
-Churn Prediction with PySpark using MLlib and ML Packages <a href="https://mapr.com/blog/churn-prediction-pyspark-using-mllib-and-ml-packages/" target="_blank">Here</a>.
-Telco Customer Churn <a href="https://www.kaggle.com/blastchar/telco-customer-churn" target="_blank">Here</a>.
-Bank Customer Churn Prediction <a href="https://www.kaggle.com/kmalit/bank-customer-churn-prediction" target="_blank">Here</a>.
+* Thanks <a href="https://www.udacity.com" target="_blank">Udacity</a> team.
+* Template for web app is gotten from <a href="https://coderthemes.com" target="_blank">Coder Themes</a>.
+* Churn Prediction with PySpark using MLlib and ML Packages <a href="https://mapr.com/blog/churn-prediction-pyspark-using-mllib-and-ml-packages/" target="_blank">Here</a>.
+* Telco Customer Churn <a href="https://www.kaggle.com/blastchar/telco-customer-churn" target="_blank">Here</a>.
+* Bank Customer Churn Prediction <a href="https://www.kaggle.com/kmalit/bank-customer-churn-prediction" target="_blank">Here</a>.
 
