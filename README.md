@@ -68,6 +68,7 @@ There are three(3) components of this project:
 As input data, a mini dataset is used for analysis:
 * mini_sparkify_event_data.json – a tiny subset of the full dataset, which is useful for preliminary data analysis.
  this can be downloaded from __[Sample data file](https://www.kaggle.com/ibrodex/Sparkify)__  and place in _data_ folder.
+* The __explorative data analysis (EDA)__ of the mini dataset (the subset of the whole dataset) is provided in [Sparkify.ipynb](https://github.com/ebrym/SparkifyCapstoneProject/blob/master/Sparkify.ipynb).
 
 
 <a id='Implementation'></a>
@@ -109,7 +110,6 @@ The Random Forest Classifier was chosen from the set of other models (Logistic R
 
 ### 2.3. Flask Web App
 
-### Web Application
 The web application is implemented with:
 * Flask running the back-end,
 * Bootstrap controls of front-end.
