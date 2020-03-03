@@ -72,7 +72,7 @@ def process_dataset(df):
     df - initial dataset loaded from json file
     
     OUTPUT:
-    df_ml - new dataset prepared for machine learning
+    df_ft - new dataset prepared for machine learning
     contains the following columns:
     1. userId - initial id of the user
     2. gender - user's gender
@@ -203,7 +203,7 @@ def build_model(df_ft):
     Function builds machine learning model to predict churn
     
     INPUT:
-        df_ml - dataset which contains user features to predict customer churn
+        df_ft - dataset which contains user features to predict customer churn
         
     OUTPUT:
         model - model which predicts customer churn
