@@ -28,7 +28,7 @@ The full report on the project is [here](https://github.com/Lexie88rus/Udacity-D
 
 ## 1. Project Overview
 
-The goal of this project was to help Sparkify music service retain their customers. Predicting churn rates is quite a challenging and common problem regularly encountered in any customer-facing business. It is crucial for businesses to identify customers who are about to churn and take action to retain them before it happens. Being proactive on this can significantly increase customer satisfaction for sevices rendered by the business.
+The goal of this project is to help Sparkify music service retain their customers. Predicting churn rates is quite a challenging and common problem regularly encountered in any customer-facing business. It is crucial for businesses to identify customers who are about to churn and take action to retain them before it happens. Being proactive on this can significantly increase customer satisfaction for sevices rendered by the business.
 In this project, data analysis was done using a minified version of the large dataset due to availability of resources needed to run the large dataset. Also, an analysis of different machine learning techniques were explored in order to determine the best machine learning algorithm to use for prediction. Further more, a web application was developed to demonstrate the results.
 Detail analysis are provided in the jupyter notebook and as a post [here](https://medium.com/@ibrodex/music-service-data-analysis-and-predicting-customer-churn-d4a29fde8733).
 
